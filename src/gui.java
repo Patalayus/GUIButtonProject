@@ -44,7 +44,7 @@ public class gui implements ActionListener {
         button.addActionListener(new gui());
         panel.add(button);
 
-        JLabel success = new JLabel("");
+        success = new JLabel("");
         success.setBounds(10, 110, 300, 25);
         panel.add(success);
 
@@ -56,6 +56,10 @@ public class gui implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String user = userText.getText();
         String password = passwordText.getText();
-        System.out.println(user + ", " + password);
+        //System.out.println(user + ", " + password);
+
+        if(user.equals("admin") && password.equals("swordfish")){
+            success.setText("Login Successful!");
+        }
     }
 }
